@@ -1,0 +1,10 @@
+<html>
+<script>
+function load(page) {
+  document.getElementById("video").src = page;
+}
+const searchParams = new URLSearchParams(window.location.search);
+const signature = searchParams.get('signature');
+</script>
+<iframe id="video"></iframe> 
+<input type="button" onclick="load('https://youtube.com/embed/' + signature)" value="page 1"/>
