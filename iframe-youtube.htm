@@ -4,7 +4,6 @@ function load(page) {
   document.getElementById("video").src = page;
 }
 const searchParams = new URLSearchParams(window.location.search);
-const signature = searchParams.get('signature');
+const token = searchParams.get('token');
 </script>
-<iframe id="video"></iframe> 
-<input type="button" onclick="load('https://youtube.com/embed/' + signature)" value="page 1"/>
+<iframe id="video" frameborder="0" onload="load('https://youtube.com/embed/' + token)" allowfullscreen style="width: 100%; height: 100%;"></iframe>
